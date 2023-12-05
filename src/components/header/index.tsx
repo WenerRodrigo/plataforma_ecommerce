@@ -11,10 +11,10 @@ export const Header = () => {
             <S.Title>Convertize E-commerce</S.Title>
 
             <S.SubTitle>
-                <S.NavLink to="">Pagina Inicial</S.NavLink>
-                <S.NavLink to="">Produtos</S.NavLink>
-                <S.NavLink to="">Quem Somos</S.NavLink>
-                <S.NavLink to="">Seja um Parceiro</S.NavLink>
+                <S.NavLink to="/">Pagina Inicial</S.NavLink>
+                <S.NavLink to="/products">Produtos</S.NavLink>
+                <S.NavLink to="/about">Quem Somos</S.NavLink>
+                <S.NavLink to="/partner">Seja um Parceiro</S.NavLink>
             </S.SubTitle>
         </S.Content>
     )
