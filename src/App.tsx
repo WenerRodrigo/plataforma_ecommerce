@@ -1,9 +1,13 @@
 import './App.css';
+import { Footer } from './components/footer';
+import { Header } from './components/header';
+import { AppRoutes } from './routes';
 
 function App() {
   return (
     <div>
-      <h1>olá</h1>
+      <AppRoutes />
+      <Footer />
     </div>
   );
 }
