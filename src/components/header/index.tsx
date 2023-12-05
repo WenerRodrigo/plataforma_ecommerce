@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 import { Link } from 'react-router-dom';
+import { Cart } from '../cart';
 
 const logo = require('../../assets/convertize_logo.png')
 
@@ -16,6 +17,7 @@ export const Header = () => {
                 <S.NavLink to="/about">Quem Somos</S.NavLink>
                 <S.NavLink to="/partner">Seja um Parceiro</S.NavLink>
             </S.SubTitle>
+            <Cart />
         </S.Content>
     )
 }
