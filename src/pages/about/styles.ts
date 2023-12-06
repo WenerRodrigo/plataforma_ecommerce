@@ -9,6 +9,7 @@ export const AboutContainer = styled.div`
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin-bottom: 15px;
 `;
 
 export const AboutTitle = styled.h1`
@@ -17,7 +18,6 @@ export const AboutTitle = styled.h1`
     font-family: 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
 `;
 
 export const AboutContent = styled.p`
@@ -37,7 +37,6 @@ export const ServicesTitle = styled.h2`
     font-family: 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
 `;
 
 export const ServicesList = styled.ul`
@@ -62,7 +61,6 @@ export const ValuesTitle = styled.h2`
     font-family: 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
 `;
 
 export const ValuesList = styled.ul`

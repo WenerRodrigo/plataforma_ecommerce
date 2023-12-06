@@ -3,12 +3,33 @@ import styled from "styled-components";
 export const PartnerContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px;
-  margin-top: 40px;
+  padding: 30px;
+  margin-top: auto;
   background-color: #f4f4f4;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   text-align: center;
+
+  @media (max-width: 320px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+  }
+
+  @media (max-width: 375px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+  }
+
+  @media (max-width: 425px) {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+  }
 `;
 
 export const PartnerTitle = styled.h1`
@@ -29,17 +50,67 @@ export const PartnerBenefits = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px;
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+  }
 `;
 
 export const BenefitItem = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
   &:not(:last-child) {
     margin-right: 20px;
+  }
+
+  @media (min-width: 320px) {
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    flex-direction: column;
+  }
+
+  @media (min-width: 375px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  @media (min-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
   }
 `;
 

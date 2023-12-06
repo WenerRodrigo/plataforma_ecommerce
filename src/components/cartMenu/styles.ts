@@ -14,6 +14,18 @@ export const ContentCartMenu = styled.div`
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+
+    @media (max-width: 320px) {
+        width: 100%;
+    }
+
+    @media (max-width: 375px) {
+        width: 100%;
+    }
+
+    @media (max-width: 425px) {
+        width: 100%;
+    }
 `
 
 export const IconButton = styled.button`

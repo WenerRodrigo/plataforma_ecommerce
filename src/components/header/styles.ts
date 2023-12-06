@@ -7,6 +7,25 @@ export const Content = styled.div`
     align-items: center;
     justify-content: space-around;
     background-color: #444;
+
+
+    @media (max-width: 320px) {
+        flex-direction: column;
+        padding: 12px;
+        text-align: center;
+    }
+
+    @media (max-width: 375px) {
+        flex-direction: column;
+        padding: 12px;
+        text-align: center;
+    }
+
+    @media (max-width: 425px) {
+        flex-direction: column;
+        padding: 12px;
+        text-align: center;
+    }
 `
 
 export const Logo = styled.img`
@@ -29,6 +48,21 @@ export const SubTitle = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @media (max-width: 320px) {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    @media (max-width: 375px) {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    @media (max-width: 425px) {
+        margin-top: 10px;
+        flex-direction: column;
+    }
 `
 
 export const NavLink = styled(Link)`

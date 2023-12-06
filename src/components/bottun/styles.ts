@@ -9,6 +9,24 @@ export const ButtonContent = styled.div`
     padding-left: 20px;
     background-color: #444;
     height: 65px;
+
+    @media (max-width: 320px) {
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    @media (max-width: 375px) {
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    @media (max-width: 425px) {
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
 `
 
 export const Button = styled.button`
