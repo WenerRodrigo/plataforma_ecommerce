@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import * as S from './styles';
 import { useCart } from "../../components/context";
-import { Button } from "../../components/bottun";
-
+import { Header } from "../../components/header";
 
 
 export const Products = () => {
@@ -86,7 +85,7 @@ export const Products = () => {
 
     return (
         <>
-        <Button />
+        <Header />
             <S.Title>Conheça nossos Produtos</S.Title>
             <S.Content>
                 <S.SearchInput
