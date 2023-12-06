@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import * as S from './styles';
+import { useCart } from "../../components/context";
 
 
 
@@ -9,6 +10,7 @@ export const Home = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [searchQuery, setSearchQuery] = useState<string>('');
     const [itemQuantities, setItemQuantities] = useState<{ [key: string]: number }>({});
+    const { addToCart, cartItems } = useCart();
 
 
     useEffect(() => {
@@ -23,9 +25,10 @@ export const Home = () => {
         return () => clearTimeout(delayTimer);
     }, [searchQuery]);
 
-    const fetchApi = (query: string) => {
+    const fetchApi = async (query: string) => {
         setIsLoading(true);
-        api.get('/sites/MLB/search', {
+
+        api.get("/sites/MLB/search", {
             params: {
                 q: query,
             }
@@ -38,10 +41,10 @@ export const Home = () => {
             setItemQuantities(initialQuantities);
             setData(searchData);
         }).catch(error => {
-            console.error(error);
+            console.log(error);
         }).finally(() => {
             setIsLoading(false);
-        })
+        });
     }
 
     if (isLoading) {
@@ -52,14 +55,30 @@ export const Home = () => {
         setSearchQuery(event.target.value);
     }
 
+    const handleQuantityChange = (itemId: string, change: number) => {
+        setItemQuantities(prevQuantities => ({
+            ...prevQuantities,
+            [itemId]: Math.max(0, prevQuantities[itemId] + change),
+        }));
+    }
+
+    const handleAddToCart = (item: any) => {
+        addToCart(item, itemQuantities[item.id]);
+        handleQuantityChange(item.id, 0);
+    };
+
+    const handleRemoveFromCart = (itemId: string) => {
+        handleQuantityChange(itemId, -1);
+    };
+
     const calculateDiscountPercentage = (originalPrice: number, salePrice: number) => {
         if (originalPrice && salePrice) {
             if (originalPrice === salePrice) {
                 return 0;
             }
 
-            const discount = Math.min(1, salePrice / originalPrice) * 100;
-            return discount.toFixed(0); 
+            const discount = ((originalPrice - salePrice) / originalPrice) * 100;
+            return discount.toFixed(0);
         }
         return 0;
     }
@@ -68,7 +87,7 @@ export const Home = () => {
         <>
             <S.Title>Conheça nossos Produtos</S.Title>
             <S.Content>
-                <S.SearchInput 
+                <S.SearchInput
                     type="text"
                     placeholder="Buscar produtos, marcas e muito mais..."
                     value={searchQuery}
@@ -90,12 +109,12 @@ export const Home = () => {
                                 <S.Installments>em 12x de R$: {item.installments.amount}</S.Installments>
                             )}
                             <S.ButtonContainer>
-                                <S.Button>+</S.Button>
-                                <span>0</span>
-                                <S.Button>-</S.Button>
+                                <S.Button onClick={() => handleQuantityChange(item.id, 1)}>+</S.Button>
+                                <span>{itemQuantities[item.id]}</span>
+                                <S.Button onClick={() => handleRemoveFromCart(item.id)}>-</S.Button>
                             </S.ButtonContainer>
                             {/* <S.ButtonComprar>Comprar</S.ButtonComprar> */}
-                            <S.ButtonAddCart>Adicionar ao Carrinho</S.ButtonAddCart>
+                            <S.ButtonAddCart onClick={() => handleAddToCart(item)}>Adicionar ao Carrinho</S.ButtonAddCart>
                         </S.Card>
                     ))}
                 </S.ContentCard>
