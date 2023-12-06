@@ -7,16 +7,36 @@ import * as S from './styles';
 export const Home = () => {
     const [data, setData] = useState<any>([]);
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [searchQuery, setSearchQuery] = useState<string>('');
+    const [itemQuantities, setItemQuantities] = useState<{ [key: string]: number }>({});
 
-    const fetchApi = () => {
+
+    useEffect(() => {
+        const delayTimer = setTimeout(() => {
+            if (searchQuery.trim() !== '') {
+                fetchApi(searchQuery);
+            } else {
+                fetchApi('eletronicos');
+            }
+        }, 1000);
+
+        return () => clearTimeout(delayTimer);
+    }, [searchQuery]);
+
+    const fetchApi = (query: string) => {
         setIsLoading(true);
         api.get('/sites/MLB/search', {
             params: {
-                q: 'celular',
+                q: query,
             }
         }).then(response => {
-            const data = response.data.results;
-            setData(data);
+            const searchData = response.data.results;
+            const initialQuantities: { [key: string]: number } = {};
+            searchData.forEach((item: any) => {
+                initialQuantities[item.id] = 0;
+            });
+            setItemQuantities(initialQuantities);
+            setData(searchData);
         }).catch(error => {
             console.error(error);
         }).finally(() => {
@@ -24,12 +44,12 @@ export const Home = () => {
         })
     }
 
-    useEffect(() => {
-        fetchApi();
-    }, [])
-
     if (isLoading) {
         return <S.Loanding>Carregando...</S.Loanding>
+    }
+
+    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value);
     }
 
     const calculateDiscountPercentage = (originalPrice: number, salePrice: number) => {
@@ -48,8 +68,11 @@ export const Home = () => {
         <>
             <S.Title>Conheça nossos Produtos</S.Title>
             <S.Content>
-                <S.SearchInput type="text"
+                <S.SearchInput 
+                    type="text"
                     placeholder="Buscar produtos, marcas e muito mais..."
+                    value={searchQuery}
+                    onChange={handleSearchChange}
                 />
                 <S.ContentCard>
                     {data.map((item: any) => (
