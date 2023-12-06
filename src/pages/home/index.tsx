@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../services/api";
+import * as S from './styles';
 
 
 export const Home = () => {
@@ -8,13 +9,13 @@ export const Home = () => {
 
     const fetchApi = () => {
         setIsLoading(true);
-        api.get('/sites/MLB/search' , {
+        api.get('/sites/MLB/search', {
             params: {
                 q: 'celular',
             }
         }).then(response => {
-           const data = response.data.results;
-           setData(data);
+            const data = response.data.results;
+            setData(data);
         }).catch(error => {
             console.error(error);
         }).finally(() => {
@@ -26,29 +27,32 @@ export const Home = () => {
         fetchApi();
     }, [])
 
-    if(isLoading) {
-        return <h3>Carregando...</h3>
+    if (isLoading) {
+        return <S.Loanding>Carregando...</S.Loanding>
     }
 
     return (
-        <div>
-            <h1>Conheça nossos Produtos</h1>
+        <>
+            <S.Title>Conheça nossos Produtos</S.Title>
+            <S.Content>
+                <S.SearchInput type="text"
+                    placeholder="Digite o nome do produto"
+                />
 
-            <input type="text"
-                placeholder="Digite o nome do produto"
-            />
-
-            <div>
-                {data.map((item: any) => (
-                    <div key={item.id}>
-                        <h4>{item.title}</h4>
-                        <img src={item.thumbnail} alt={item.title} />
-                        <p>R$: {item.price}</p>
-                        <button>+</button>
-                        <button>-</button>
-                    </div>
-                ))}
-            </div>
-        </div>
+                <S.ContentCard>
+                    {data.map((item: any) => (
+                        <S.Card key={item.id}>
+                            <S.ProductTitle>{item.title}</S.ProductTitle>
+                            <S.ImageCard src={item.thumbnail} alt={item.title} />
+                            <S.Price>R$: {item.price}</S.Price>
+                            <S.Button>+</S.Button>
+                            <span>0</span>
+                            <S.Button>-</S.Button>
+                            <S.ButtonAddCart>Adicionar ao Carrinho</S.ButtonAddCart>
+                        </S.Card>
+                    ))}
+                </S.ContentCard>
+            </S.Content>
+        </>
     )
 }
