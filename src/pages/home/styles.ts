@@ -52,7 +52,7 @@ export const Card = styled.div`
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
-    width: 300px;
+    width: 250px;
     height: 400px;
 
     &:hover {
