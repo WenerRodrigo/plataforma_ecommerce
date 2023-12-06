@@ -24,5 +24,4 @@ yarn-error.log*
 
 
 # Api
-.env
-.env.example
+.vercel
