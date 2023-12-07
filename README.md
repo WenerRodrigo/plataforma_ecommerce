@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+## Plataforma E-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Visão Geral
+A aplicação Convertize E-Commerce destaca-se como uma plataforma robusta, 
+oferecendo uma experiência de compra intuitiva e integrada com a API do Mercado Livre. 
+Além da funcionalidade principal de e-commerce, a aplicação apresenta páginas informativas que destacam a identidade e 
+expertise da Convertize na criação de soluções tecnológicas.
 
-## Available Scripts
+## Funcionalidades Principais
+Exploração de Produtos: A aplicação permite aos usuários navegar e explorar uma ampla variedade de produtos fornecidos pela API do Mercado Livre, garantindo uma experiência de compra diversificada e personalizada.
 
-In the project directory, you can run:
+## Carrinho de Compras: 
+Os usuários podem adicionar produtos ao carrinho, visualizar detalhes, ajustar quantidades e finalizar suas compras de maneira conveniente e eficiente.
 
-### `npm start`
+## Páginas Informativas: 
+Além da funcionalidade de e-commerce, a aplicação inclui páginas informativas, como a página "Quem Somos", que destaca a missão, visão e valores da Convertize, reforçando o comprometimento com a inovação e excelência.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Integração com API do Mercado Livre: 
+A aplicação utiliza a API do Mercado Livre para fornecer informações em tempo real sobre os produtos, garantindo dados precisos e atualizados para os usuários.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Pré-requisitos
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
-### `npm test`
+Node.js
+npm (ou yarn)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Como Iniciar o Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone o Repositório:
+git clone https://github.com/seu-usuario/convertize-ecommerce.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instale as Dependências:
+cd convertize-ecommerce
+npm install # ou yarn install
 
-### `npm run eject`
+Inicie o Servidor de Desenvolvimento:
+npm start # ou yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Preview
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![img_cart](https://github.com/WenerRodrigo/plataforma_ecommerce/assets/106413124/e3e20f6b-02c1-460b-b0bc-8023d78b41b3)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![img_menu](https://github.com/WenerRodrigo/plataforma_ecommerce/assets/106413124/9f46daaa-73c1-4fc9-9a59-c81221975166)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
