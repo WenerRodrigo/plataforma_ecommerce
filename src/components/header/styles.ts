@@ -51,16 +51,19 @@ export const SubTitle = styled.div`
 
     @media (max-width: 320px) {
         margin-top: 10px;
+        margin: 12px;
         flex-direction: column;
     }
 
     @media (max-width: 375px) {
         margin-top: 10px;
+        margin: 12px;
         flex-direction: column;
     }
 
     @media (max-width: 425px) {
         margin-top: 10px;
+        margin: 12px;
         flex-direction: column;
     }
 `

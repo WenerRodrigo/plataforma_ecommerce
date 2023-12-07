@@ -41,12 +41,14 @@ export const CartItemPrice = styled.p`
 `
 
 export const ButtonCart = styled.button`
+    width: 40px;
     background-color: #eee;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin: 0 2px;
 
     &:hover {
         background-color: #ddd;

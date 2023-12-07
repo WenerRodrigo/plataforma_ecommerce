@@ -31,6 +31,19 @@ export const SearchInput = styled.input`
     border-radius: 4px;
     font-size: 15px;
     outline: none;
+
+    @media (max-width: 320px) {
+        width: 80%;
+    }
+
+    @media (max-width: 375px) {
+        width: 80%;
+    }
+
+    @media (max-width: 425px) {
+        width: 60%;
+    }
+
 `
 
 export const ContentCard = styled.div`

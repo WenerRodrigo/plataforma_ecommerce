@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from './styles';
-import { Link } from "react-router-dom";
 
 const logo = require('../../assets/convertize_logo.png');
 

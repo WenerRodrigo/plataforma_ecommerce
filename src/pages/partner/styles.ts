@@ -14,7 +14,7 @@ export const PartnerContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 90%;
+    width: 100%;
   }
 
   @media (max-width: 375px) {
@@ -33,7 +33,7 @@ export const PartnerContainer = styled.div`
 `;
 
 export const PartnerTitle = styled.h1`
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   color: #333;
@@ -50,13 +50,14 @@ export const PartnerBenefits = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 40px;
+  gap: 15px;
 
   @media (max-width: 320px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
   }
 
@@ -86,14 +87,13 @@ export const BenefitItem = styled.div`
   background-color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
-
   @media (min-width: 320px) {
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 18px;
+    padding: 10px;
     flex-direction: column;
   }
 
