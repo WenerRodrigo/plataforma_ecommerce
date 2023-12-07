@@ -1,6 +1,6 @@
 ## Plataforma E-commerce
 
-##Visão Geral
+Visão Geral
 A aplicação Convertize E-Commerce destaca-se como uma plataforma robusta, 
 oferecendo uma experiência de compra intuitiva e integrada com a API do Mercado Livre. 
 Além da funcionalidade principal de e-commerce, a aplicação apresenta páginas informativas que destacam a identidade e 
