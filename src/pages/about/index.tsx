@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './styles';
-import { Button } from '../../components/bottun';
+import { Button } from '../../components/button';
 
 export const About = () => {
     return (

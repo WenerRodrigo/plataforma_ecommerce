@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../components/bottun";
+import { Button } from "../../components/button";
 import * as S from './styles';
 
 export const Partner = () => {
