@@ -6,11 +6,38 @@ export const Content = styled.div`
     align-items: center;
     width: 100%;
     background-color: #021e29;
+
+    @media (max-width: 320px) {
+        width: 100%;
+    }
+
+    @media (max-width: 375px) {
+        width: 100%;
+    }
+
+    @media (max-width: 425px) {
+        width: 100%;
+    }
 `;
 
 export const Title = styled.h1`
     color: #fff;
     font-size: 17px;
+
+    @media (max-width: 320px) {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 13px;
+        text-align: center;
+    }
 `;
 
 export const ButtonLink = styled.button`
@@ -29,56 +56,26 @@ export const ButtonLink = styled.button`
     &:hover {
         background-color: #ccc;
     }
+
+    @media (max-width: 320px) {
+        width: 30%;
+        height: 25px;
+        margin: 8px;
+    }
+
+    @media (max-width: 375px) {
+        width: 28%;
+        height: 25px;
+        margin: 8px;
+    }
+
+    @media (max-width: 425px) {
+        width: 20%;
+        height: 25px;
+        margin: 8px;
+    }
 `;
 
 
 
 
-// @media (max-width: 320px) {
-//     .content {
-//         width: 100%;
-//     }
-
-//     .title {
-//         font-size: 12px;
-//     }
-
-//     .link {
-//         width: 80px;
-//         height: 20px;
-//         font-size: 10px;
-//     }
-// }
-
-// @media (max-width: 375px) {
-//     .content {
-//         width: 100%;
-//     }
-
-//     .title {
-//         font-size: 12px;
-//     }
-
-//     .link {
-//         width: 70px;
-//         height: 20px;
-//         font-size: 10px;
-//     }
-// }
-
-// @media (max-width: 425px) {
-//     .content {
-//         width: 100%;
-//     }
-
-//     .title {
-//         font-size: 12px;
-//         text-align: center;
-//     }
-
-//     .link {
-//         width: 60px;
-//         height: 25px;
-//         font-size: 10px;
-//     }
-// }
