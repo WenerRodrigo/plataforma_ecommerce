@@ -7,7 +7,7 @@ export const ContentCartMenu = styled.div`
     right: 0;
     width: 350px;
     height: 100%;
-    background-color: #333;
+    background-color: #1576c1;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: flex;
@@ -49,7 +49,7 @@ export const TotalCart = styled.p`
 export const ButtonFinalizar = styled.button`
     width: 80%;
     height: 40px;
-    background-color: #298fb7;
+    background-color: #021e29;
     color: #fff;
     border: none;
     cursor: pointer;

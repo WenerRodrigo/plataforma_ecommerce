@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import { Cart } from "../cart";
 import { Home } from "../../pages/home";
 import { Carrossel } from "../carrossel";
+import { HeaderContainer } from "../headerContainer";
 
 const logo = require("../../assets/icone.png");
 
 export const Header = () => {
   return (
     <>
+    <HeaderContainer />
       <S.Content>
         <S.Title>
           Market

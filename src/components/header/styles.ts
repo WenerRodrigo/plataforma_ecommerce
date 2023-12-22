@@ -6,7 +6,7 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #444;
+    background-color: #1576c1;;
 
 
     @media (max-width: 320px) {
