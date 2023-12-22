@@ -41,6 +41,22 @@ export const Arrowright = styled.div`
   cursor: pointer;
   color: #000;
   font-size: 40px;
+
+  @media (max-width: 320px) {
+    width: 10%;
+  }
+
+  @media (max-width: 375px) {
+    width: 10%;
+  }
+
+  @media (max-width: 425px) {
+    width: 10%;
+  }
+
+  @media (max-width: 768px) {
+    width: 10%;
+  }
 `;
 
 export const Arrowleft = styled.div`
@@ -53,6 +69,22 @@ export const Arrowleft = styled.div`
   cursor: pointer;
   color: #000;
   font-size: 40px;
+
+  @media (max-width: 320px) {
+    width: 10%;
+  }
+
+  @media (max-width: 375px) {
+    width: 10%;
+  }
+
+  @media (max-width: 425px) {
+    width: 10%;
+  }
+
+  @media (max-width: 768px) {
+    width: 10%;
+  }
 `;
 
 export const Logo = styled.img`
