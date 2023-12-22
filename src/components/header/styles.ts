@@ -31,12 +31,15 @@ export const Content = styled.div`
 export const Logo = styled.img`
     display: flex;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     margin: 10px;
 `
 
 export const Title = styled.h1`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     font-size: 30px;
     font-weight: bold;
@@ -65,6 +68,11 @@ export const SubTitle = styled.div`
         margin-top: 10px;
         margin: 12px;
         flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 10px;
+        margin: 12px;
     }
 `
 
