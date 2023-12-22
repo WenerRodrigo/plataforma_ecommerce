@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from './styles';
 
-const logo = require('../../assets/convertize_logo.png');
+const logo = require('../../assets/icone.png');
 
 
 export const Button = () => {
@@ -13,7 +13,7 @@ export const Button = () => {
                 </span></S.Button>
             </S.NavLink>
             <S.Logo src={logo} alt="Logo Empresa" />
-            <S.TitleDescription>Convertize E-commerce</S.TitleDescription>
+            <S.TitleDescription>Market Eletronics</S.TitleDescription>
         </S.ButtonContent>
     )
 }
