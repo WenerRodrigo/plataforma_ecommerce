@@ -8,17 +8,17 @@ export const Container = styled.div`
 
   @media (max-width: 320px) {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
   }
 
   @media (max-width: 375px) {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
   }
 
   @media (max-width: 425px) {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
   }
 `;
 

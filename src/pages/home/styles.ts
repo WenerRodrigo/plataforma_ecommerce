@@ -41,7 +41,7 @@ export const SearchInput = styled.input`
     }
 
     @media (max-width: 425px) {
-        width: 60%;
+        width: 80%;
     }
 
 `
