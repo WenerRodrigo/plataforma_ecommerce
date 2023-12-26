@@ -3,6 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 60%;
   margin: 0 auto;
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+
+
 `;
 
 export const ContentButton = styled.div`
