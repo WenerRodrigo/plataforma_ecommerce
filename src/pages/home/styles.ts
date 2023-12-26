@@ -14,6 +14,7 @@ export const Title = styled.h1`
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-bottom: 1px solid #ccc;
     font-size: 28px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
