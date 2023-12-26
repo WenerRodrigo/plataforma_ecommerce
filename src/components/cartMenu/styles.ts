@@ -47,14 +47,14 @@ export const TotalCart = styled.p`
 `
 
 export const ButtonFinalizar = styled.button`
-    width: 80%;
+    width: 100%;
     height: 40px;
     background-color: #021e29;
     color: #fff;
     border: none;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
     border-radius: 5px;
     margin-top: auto;
